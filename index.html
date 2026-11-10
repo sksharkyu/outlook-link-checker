@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Link Checker</title>
+    <!-- 載入微軟官方 Outlook Add-in 庫 -->
+    <script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+    <style>
+        body { font-family: "Segoe UI", Arial, sans-serif; padding: 15px; margin: 0; background: #f9f9f9; }
+        h3 { margin-top: 0; color: #333; }
+        button.scan-btn { width: 100%; padding: 10px; background: #0078d4; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: bold; }
+        button.scan-btn:hover { background: #005a9e; }
+        .link-item { background: white; border: 1px solid #ddd; border-radius: 4px; padding: 10px; margin-top: 10px; word-break: break-all; }
+        .link-item.external { border-left: 5px solid #d83b01; }
+        .link-item.internal { border-left: 5px solid #107c10; }
+        .badge { display: inline-block; padding: 2px 6px; font-size: 11px; border-radius: 3px; font-weight: bold; margin-bottom: 5px; }
+        .badge-danger { background: #fde7e9; color: #a80000; }
+        .badge-safe { background: #dff6dd; color: #107c10; }
+        .open-btn { margin-top: 8px; padding: 6px 12px; border: 1px solid #888; background: #fff; border-radius: 3px; cursor: pointer; }
+        .open-btn:hover { background: #eee; }
+    </style>
+</head>
+<body>
+    <h3>🔗 郵件連結安全檢查</h3>
+    <button class="scan-btn" onclick="scanEmailLinks()">🔍 掃描此電郵連結</button>
+    <div id="results"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
